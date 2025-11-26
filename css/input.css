@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS Variables */
+:root {
+  --primary: #009e91;
+  --primary-dark: #007a70;
+  --primary-light: #00b8a9;
+  --primary-soft: rgba(0, 158, 145, 0.08);
+  --primary-mist: rgba(0, 158, 145, 0.05);
+  --primary-tint: rgba(0, 158, 145, 0.1);
+  --primary-muted: rgba(0, 158, 145, 0.6);
+  --ink: #fd823b;
+  --ink-dark: #e66a1f;
+  --ink-light: #ff9a5c;
+}
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap');
+
