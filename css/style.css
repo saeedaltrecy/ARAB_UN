@@ -5521,7 +5521,7 @@ html[dir="ltr"] .footer-social {
 
 .med-programs-section {
   padding: clamp(2rem, 4vw, 4rem) 0;
-  background: #fff;
+  /* background: #fff; */
 }
 
 .med-programs-grid {
