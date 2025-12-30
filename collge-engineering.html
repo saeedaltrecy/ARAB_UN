@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO / Social meta -->
+    <meta name="description"
+        content="كلية الهندسة وتقنية المعلومات — البرامج الهندسية وتقنيات المعلومات، أعضاء هيئة التدريس والمختبرات.">
+    <meta name="keywords" content="هندسة, تقنية معلومات, كلية الهندسة, جامعة العرب">
+    <meta name="author" content="جامعة العرب">
+    <meta name="reply-to" content="info@alarabuni.edu.ye">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://alarabuni.edu.ye/collge-engineering.html" />
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:site_name" content="جامعة العرب">
+    <meta property="og:title" content="كلية الهندسة وتقنية المعلومات - جامعة العرب">
+    <meta property="og:description"
+        content="كلية الهندسة وتقنية المعلومات — البرامج الهندسية وتقنيات المعلومات والمختبرات.">
+    <meta property="og:image" content="https://alarabuni.edu.ye/img/about-img.png">
+    <meta property="og:url" content="https://alarabuni.edu.ye/collge-engineering.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@alarabuni">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="theme-color" content="#009e91">
+    <title>جامعة العرب | كلية الهندسة وتقنية المعلومات</title>
+    <link rel="icon" type="image/png" href="./img/about-img.png">
+    <link rel="stylesheet" href="./css/tailwind.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-thin-rounded/css/uicons-thin-rounded.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.17/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responisve.css">
+    <link rel="stylesheet" href="./css/responsive-system.css">
+    <script src="./Js/style.js" defer></script>
+</head>
+
+<body class="rtl-dir bg-slate-50 text-slate-800">
+    <header class="header-glass sticky top-0 z-50">
+        <nav aria-label="Global" class="container mx-auto max-w-7xl py-4 lg:py-6 nav-shell space-y-4">
+            <div class="flex items-center justify-between gap-4 py-4">
+                <!-- الشعار -->
+                <div class="flex items-center gap-4">
+                    <a href="index.html"
+                        class="flex items-center gap-3 -m-2 p-2 rounded-full logo-link ring-1 ring-transparent">
+                        <span class="sr-only">العودة للرئيسية</span>
+                        <img src="./img/logo.png" alt="شعار الجامعة" class="h-12 w-auto drop-shadow-sm">
+                        <div class="hidden sm:flex flex-col pr-2">
+                            <!-- <span class="text-[10px] tracking-[0.45em] uppercase text-primary-muted font-medium">جامعة العرب</span>
+                            <span class="text-sm font-semibold text-ink">Arab University</span> -->
+                        </div>
+                    </a>
+                </div>
+
+                <!-- أدوات الهاتف -->
+                <div class="flex items-center gap-3 lg:hidden">
+                    <!-- زر القائمة -->
+                    <button type="button" id="mobile-nav-toggle"
+                        class="inline-flex items-center justify-center rounded-full bg-primary px-3.5 py-2 text-white shadow-soft transition hover-bg-primary-dark mobile-nav-btn"
+                        aria-label="فتح القائمة">
+                        <i class="fas fa-bars text-lg" id="mobile-nav-icon"></i>
+                    </button>
+                </div>
+
+                <!-- الجزء الأيمن من القائمة -->
+                <div class="hidden lg:flex lg:items-center lg:gap-4 nav-right">
+                    <!-- زر اللغة -->
+                    <div class="relative group" style="z-index: 110;">
+                        <button
+                            class="flex items-center gap-x-2 text-sm font-semibold language-btn link-hover-effect px-3 py-2 rounded-full bg-primary-soft text-primary"
+                            style="z-index: 110;">
+                            <i class="fas fa-language"></i>
+                            English
+                            <i class="fas fa-chevron-down text-xs dropdown-icon"></i>
+                        </button>
+
+                        <!-- قائمة اللغة المنسدلة -->
+                        <div
+                            class="dropdown-menu language-dropdown absolute top-full left-0 z-[110] mt-3 w-40 rounded-2xl bg-white shadow-xl ring-1 ring-slate-200/70 backdrop-blur">
+                            <div class="py-2">
+                                <a href="about.html"
+                                    class="block px-4 py-2 text-sm font-medium text-primary hover-bg-primary-tint hover-text-primary-dark link-hover-effect">العربية</a>
+                                <a href="about.html"
+                                    class="block px-4 py-2 text-sm font-medium text-primary hover-bg-primary-tint hover-text-primary-dark link-hover-effect">English</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- زر الالتحاق -->
+                    <a href="index.html#contact"
+                        class="glass-btn px-4 py-2.5 text-sm font-semibold text-primary shadow-soft focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition rounded-full solution-btn">
+                        الالتحاق
+                    </a>
+                </div>
+            </div>
+
+            <!-- قائمة سطح المكتب -->
+            <ul class="flex flex-1 items-center justify-center gap-3 lg:gap-4 xl:gap-5 nav-items">
+                <li>
+                    <a href="about.html"
+                        class="nav-link text-sm font-semibold text-ink-muted hover-text-primary transition link-hover-effect">
+                        عن الجامعة
+                    </a>
+                </li>
+
+                <li class="relative group nav-dropdown">
+                    <button type="button"
+                        class="nav-link flex items-center gap-2 text-sm font-semibold text-ink-muted hover-text-primary transition link-hover-effect">
+                        الكليات
+                        <i class="fas fa-chevron-down text-xs dropdown-icon"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-panel nav-card">
+                        <div class="nav-card__header">
+                            <div class="nav-card__icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3>الكليات</h3>
+                        </div>
+                        <ul class="nav-card__list nav-card__list--two">
+                            <li><a href="college-medicine.html" class="nav-sub-link"><img src="./img/about-img.png"
+                                        alt="" class="nav-sub-link-icon">كلية الطب والعلوم
+                                    الصحية</a></li>
+                            <li><a href="college-dentistry.html" class="nav-sub-link"><img src="./img/about-img.png"
+                                        alt="" class="nav-sub-link-icon">كلية طب الأسنان</a></li>
+                            <li><a href="index.html" class="nav-sub-link"><img src="./img/about-img.png" alt=""
+                                        class="nav-sub-link-icon">كلية الهندسة وتقنية
+                                    المعلومات</a></li>
+                            <li><a href="index.html" class="nav-sub-link"><img src="./img/about-img.png" alt=""
+                                        class="nav-sub-link-icon">كلية العلوم الإدارية</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="relative group nav-dropdown">
+                    <button type="button"
+                        class="nav-link flex items-center gap-2 text-sm font-semibold text-ink-muted hover-text-primary transition link-hover-effect">
+                        مراكز – وحدات الجامعة
+                        <i class="fas fa-chevron-down text-xs dropdown-icon"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-panel nav-card">
+                        <div class="nav-card__header">
+                            <div class="nav-card__icon">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <h3>مراكز – وحدات الجامعة</h3>
+                        </div>
+                        <ul class="nav-card__list nav-card__list--two">
+                            <li><a href="index.html" class="nav-sub-link"><img src="./img/about-img.png" alt=""
+                                        class="nav-sub-link-icon">مركز التطوير الأكاديمي
+                                    وضمان الجودة</a></li>
+                            <li><a href="index.html" class="nav-sub-link"><img src="./img/about-img.png" alt=""
+                                        class="nav-sub-link-icon">وحدة الإرشاد الأكاديمي</a>
+                            </li>
+                            <li><a href="index.html" class="nav-sub-link"><img src="./img/about-img.png" alt=""
+                                        class="nav-sub-link-icon">وحدة خدمة المجتمع</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="relative group nav-dropdown">
+                    <button type="button"
+                        class="nav-link flex items-center gap-2 text-sm font-semibold text-ink-muted hover-text-primary transition link-hover-effect">
+                        البرامج الأكاديمية
+                        <i class="fas fa-chevron-down text-xs dropdown-icon"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-panel nav-card nav-card--wide">
+                        <div class="nav-card__header">
+                            <div class="nav-card__icon">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <h3>البرامج الأكاديمية</h3>
+                        </div>
+                        <ul class="nav-card__list nav-card__list--multi">
+                            <li><a href="program-dentistry.html" class="nav-sub-link"><img src="./img/about-img.png"
+                                        alt="" class="nav-sub-link-icon">بكالوريوس طب وجراحة الفم
+                                    والأسنان</a></li>
+                            <li><a href="program-medical-labs.html" class="nav-sub-link"><img src="./img/about-img.png"
+                                        alt="" class="nav-sub-link-icon">بكالوريوس مختبرات
+                                    طبية</a></li>
+                            <li><a href="program-pharmacy.html" class="nav-sub-link"><img src="./img/about-img.png"
+                                        alt="" class="nav-sub-link-icon">بكالوريوس صيدلة</a></li>
+                            <li><a href="program-medicine.html" class="nav-sub-link"><img src="./img/about-img.png"
+                                        alt="" class="nav-sub-link-icon">بكالوريوس طب عام
+                                    وجراحة</a></li>
+                            <li><a href="index.html" class="nav-sub-link"><img src="./img/about-img.png" alt=""
+                                        class="nav-sub-link-icon">بكالوريوس السمع
+                                    والنطق</a></li>
+                            <li><a href="index.html" class="nav-sub-link"><img src="./img/about-img.png" alt=""
+                                        class="nav-sub-link-icon">بكالوريوس العلاج
+                                    الطبيعي</a></li>
+                            <li><a href="program-internship-dentistry.html" class="nav-sub-link"><img
+                                        src="./img/about-img.png" alt="" class="nav-sub-link-icon">برنامج سنة الامتياز
+                                    في
+                                    طب الأسنان</a></li>
+                            <li><a href="index.html" class="nav-sub-link"><img src="./img/about-img.png" alt=""
+                                        class="nav-sub-link-icon">بكالوريوس تقنية
+                                    معلومات</a></li>
+                            <li><a href="index.html" class="nav-sub-link"><img src="./img/about-img.png" alt=""
+                                        class="nav-sub-link-icon">بكالوريوس هندسة
+                                    تعدين</a></li>
+                            <li><a href="index.html" class="nav-sub-link"><img src="./img/about-img.png" alt=""
+                                        class="nav-sub-link-icon">بكالوريوس هندسة
+                                    التصميم الداخلي</a></li>
+                            <li><a href="index.html" class="nav-sub-link"><img src="./img/about-img.png" alt=""
+                                        class="nav-sub-link-icon">بكالوريوس هندسة
+                                    مدنية</a></li>
+                            <li><a href="index.html" class="nav-sub-link"><img src="./img/about-img.png" alt=""
+                                        class="nav-sub-link-icon">بكالوريوس الذكاء
+                                    الاصطناعي</a></li>
+                            <li><a href="index.html" class="nav-sub-link"><img src="./img/about-img.png" alt=""
+                                        class="nav-sub-link-icon">بكالوريوس هندسة
+                                    معمارية</a></li>
+                            <li><a href="index.html" class="nav-sub-link"><img src="./img/about-img.png" alt=""
+                                        class="nav-sub-link-icon">بكالوريوس محاسبة</a></li>
+                            <li><a href="index.html" class="nav-sub-link"><img src="./img/about-img.png" alt=""
+                                        class="nav-sub-link-icon">بكالوريوس إدارة
+                                    أعمال</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="relative group nav-dropdown">
+                    <button type="button"
+                        class="nav-link flex items-center gap-2 text-sm font-semibold text-ink-muted hover-text-primary transition link-hover-effect">
+                        شؤون الطلاب
+                        <i class="fas fa-chevron-down text-xs dropdown-icon"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-panel nav-card">
+                        <div class="nav-card__header">
+                            <div class="nav-card__icon">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <h3>شؤون الطلاب</h3>
+                        </div>
+                        <ul class="nav-card__list nav-card__list--two">
+                            <li><a href="index.html" class="nav-sub-link"><img src="./img/about-img.png" alt=""
+                                        class="nav-sub-link-icon">دليل الطالب الجامعي</a>
+                            </li>
+                            <li><a href="index.html" class="nav-sub-link"><img src="./img/about-img.png" alt=""
+                                        class="nav-sub-link-icon">نتائج الطلاب</a></li>
+                            <li><a href="index.html" class="nav-sub-link"><img src="./img/about-img.png" alt=""
+                                        class="nav-sub-link-icon">التقويم الجامعي</a></li>
+                            <li><a href="index.html" class="nav-sub-link"><img src="./img/about-img.png" alt=""
+                                        class="nav-sub-link-icon">اللوائح والأنظمة</a></li>
+                            <li><a href="index.html" class="nav-sub-link"><img src="./img/about-img.png" alt=""
+                                        class="nav-sub-link-icon">النماذج والاستمارات</a>
+                            </li>
+                            <li><a href="index.html" class="nav-sub-link"><img src="./img/about-img.png" alt=""
+                                        class="nav-sub-link-icon">الطلاب الخريجين</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="relative group nav-dropdown">
+                    <button type="button"
+                        class="nav-link flex items-center gap-2 text-sm font-semibold text-ink-muted hover-text-primary transition link-hover-effect">
+                        خدمة المجتمع
+                        <i class="fas fa-chevron-down text-xs dropdown-icon"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-panel nav-card">
+                        <div class="nav-card__header">
+                            <div class="nav-card__icon">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <h3>خدمة المجتمع</h3>
+                        </div>
+                        <ul class="nav-card__list nav-card__list--two">
+                            <li><a href="index.html" class="nav-sub-link"><img src="./img/about-img.png" alt=""
+                                        class="nav-sub-link-icon">قافلة العرب 1</a></li>
+                            <li><a href="index.html" class="nav-sub-link"><img src="./img/about-img.png" alt=""
+                                        class="nav-sub-link-icon">قافلة العرب 2</a></li>
+                            <li><a href="index.html" class="nav-sub-link"><img src="./img/about-img.png" alt=""
+                                        class="nav-sub-link-icon">تدشين حملة طبيب أسنان لكل
+                                    مدرسة</a></li>
+                            <li><a href="index.html" class="nav-sub-link"><img src="./img/about-img.png" alt=""
+                                        class="nav-sub-link-icon">عيادات طب الأسنان
+                                    المجانية</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="relative group nav-dropdown">
+                    <button type="button"
+                        class="nav-link flex items-center gap-2 text-sm font-semibold text-ink-muted hover-text-primary transition link-hover-effect">
+                        مجلة الجامعة
+                        <i class="fas fa-chevron-down text-xs dropdown-icon"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-panel nav-card">
+                        <div class="nav-card__header">
+                            <div class="nav-card__icon">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <h3>مجلة الجامعة</h3>
+                        </div>
+                        <ul class="nav-card__list">
+                            <li><a href="index.html" class="nav-sub-link"><img src="./img/about-img.png" alt=""
+                                        class="nav-sub-link-icon">مجلة العرب للعلوم
+                                    الطبية</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="relative group nav-dropdown">
+                    <button type="button"
+                        class="nav-link flex items-center gap-2 text-sm font-semibold text-ink-muted hover-text-primary transition link-hover-effect">
+                        المؤتمرات
+                        <i class="fas fa-chevron-down text-xs dropdown-icon"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-panel nav-card nav-card--wide">
+                        <div class="nav-card__header">
+                            <div class="nav-card__icon">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <h3>المؤتمرات</h3>
+                        </div>
+                        <ul class="nav-card__list nav-card__list--two">
+                            <li><a href="index.html" class="nav-sub-link"><img src="./img/about-img.png" alt=""
+                                        class="nav-sub-link-icon">المؤتمر الدولي لأمراض
+                                    السرطان</a></li>
+                            <li><a href="index.html" class="nav-sub-link"><img src="./img/about-img.png" alt=""
+                                        class="nav-sub-link-icon">المؤتمر الدولي الطبي
+                                    الثاني لسلامة المرضى بين الواقع والمأمول</a></li>
+                            <li><a href="index.html" class="nav-sub-link"><img src="./img/about-img.png" alt=""
+                                        class="nav-sub-link-icon">المؤتمر الطبي الدولي
+                                    الثالث تطوير التعليم الطبي نحو رعاية صحية آمنة</a></li>
+                            <li><a href="index.html" class="nav-sub-link"><img src="./img/about-img.png" alt=""
+                                        class="nav-sub-link-icon">المؤتمر الطبي الدولي
+                                    الرابع رعاية الإصابات: التحديات والحلول</a></li>
+                            <li><a href="index.html" class="nav-sub-link"><img src="./img/about-img.png" alt=""
+                                        class="nav-sub-link-icon">المؤتمر الدولي الأول
+                                    لطب الأسنان (طب الأسنان.. الواقع والتحديات)</a></li>
+                            <li><a href="lectures-videos.html" class="nav-sub-link"><img src="./img/about-img.png" alt=""
+                                        class="nav-sub-link-icon">محاضرات وتقارير مرئية
+                                    إخبارية</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Mobile navigation panel (same as other pages) -->
+    <div id="mobile-nav-menu" class="fixed inset-0 z-50 hidden lg:hidden mobile-nav-panel">
+        <div class="fixed inset-0 bg-black/50 mobile-nav-overlay backdrop-blur-sm" aria-hidden="true"></div>
+        <div
+            class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white/98 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-slate-200/70 backdrop-blur-xl mobile-nav-content shadow-2xl">
+            <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-200/60">
+                <a href="index.html" class="flex items-center gap-3"><img src="./img/logo.png" alt="شعار الجامعة"
+                        class="h-10 w-auto drop-shadow-sm"></a>
+                <button type="button" id="mobile-nav-close"
+                    class="rounded-full p-2.5 text-primary hover-bg-primary hover-text-white transition shadow-soft"><span
+                        class="sr-only">إغلاق القائمة</span><i class="fas fa-times text-xl"></i></button>
+            </div>
+            <div class="space-y-2 mobile-nav-links">
+                <a href="about.html"
+                    class="mobile-nav-link block rounded-xl bg-slate-50 px-4 py-3 text-base font-semibold text-primary transition hover-bg-primary-tint hover-text-primary-dark">عن
+                    الجامعة</a>
+                <div class="mobile-nav-accordion">
+                    <button
+                        class="mobile-nav-accordion-toggle w-full flex items-center justify-between rounded-xl bg-slate-50 px-4 py-3 text-base font-semibold text-primary transition hover-bg-primary-tint"><span>الكليات</span><i
+                            class="fas fa-chevron-down text-xs transition-transform duration-300 mobile-nav-accordion-icon"></i></button>
+                    <div class="mobile-nav-accordion-content hidden mt-2 space-y-1 bg-white/80 px-4 py-2 rounded-xl">
+                        <a href="college-medicine.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">كلية
+                            الطب والعلوم الصحية</a>
+                        <a href="college-dentistry.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">كلية
+                            طب الأسنان</a>
+                        <a href="#"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">كلية
+                            الهندسة وتقنية المعلومات</a>
+                        <a href="#"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">كلية
+                            العلوم الإدارية</a>
+                    </div>
+                </div>
+                <!-- other mobile sections omitted -->
+                <a href="index.html#contact"
+                    class="mobile-nav-link block w-full text-center rounded-xl bg-slate-50 px-4 py-3 text-base font-semibold text-primary transition hover-bg-primary-tint hover-text-primary-dark">الالتحاق</a>
+                <div class="mobile-nav-accordion">
+                    <button
+                        class="mobile-nav-accordion-toggle w-full flex items-center justify-between rounded-xl bg-slate-50 px-4 py-3 text-base font-semibold text-primary transition hover-bg-primary-tint">
+                        <div class="flex items-center gap-2"><i class="fas fa-language"></i><span>اللغة</span></div><i
+                            class="fas fa-chevron-down text-xs transition-transform duration-300 mobile-nav-accordion-icon"></i>
+                    </button>
+                    <div class="mobile-nav-accordion-content hidden mt-2 space-y-1 bg-white/80 px-4 py-2 rounded-xl">
+                        <a href="#"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">العربية</a>
+                        <a href="#"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">English</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main class="med-page-main">
+        <div class="med-page-layout">
+            <!-- Sidebar Navigation -->
+            <aside class="med-sidebar">
+                <!-- Mobile Toggle Button -->
+                <button id="med-sidebar-mobile-toggle" class="med-sidebar-mobile-toggle" aria-label="Toggle Sidebar">
+                    <i class="fas fa-list-ul"></i>
+                </button>
+
+                <!-- Mobile Overlay -->
+                <div class="med-sidebar-overlay"></div>
+
+                <div class="med-sidebar-content">
+                    <div class="med-sidebar-header">
+                        <h3>قائمة المحتويات</h3>
+                    </div>
+                    <nav class="med-sidebar-nav">
+                        <ul class="med-sidebar-list">
+                            <li class="med-sidebar-item">
+                                <a href="college-dentistry.html" class="med-sidebar-link active">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span>عن الكلية</span>
+                                </a>
+                            </li>
+                            <!-- <li class="med-sidebar-item med-sidebar-item--parent">
+                                <button type="button" class="med-sidebar-link med-sidebar-toggle">
+                                    <i class="fas fa-building"></i>
+                                    <span>أقسام الكلية</span>
+                                    <i class="fas fa-chevron-down med-sidebar-arrow"></i>
+                                </button>
+                                <ul class="med-sidebar-submenu">
+                                    <li><a href="#" class="med-sidebar-sublink">قسم طب وجراحة الفم والأسنان</a></li>
+                                </ul>
+                            </li> -->
+                            <li class="med-sidebar-item med-sidebar-item--parent">
+                                <button type="button" class="med-sidebar-link med-sidebar-toggle">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>برامج الكلية</span>
+                                    <i class="fas fa-chevron-down med-sidebar-arrow"></i>
+                                </button>
+                                <ul class="med-sidebar-submenu">
+                                    <li><a href="program-dentistry.html" class="med-sidebar-sublink">برنامج البكالوريوس
+                                            في طب وجراحة الفم
+                                            والأسنان</a></li>
+                                    <li><a href="program-internship-dentistry.html" class="med-sidebar-sublink">برنامج
+                                            سنة الامتياز في طب الأسنان</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="med-sidebar-item med-sidebar-item--parent">
+                                <button type="button" class="med-sidebar-link med-sidebar-toggle">
+                                    <i class="fas fa-users"></i>
+                                    <span>كادر الكلية</span>
+                                    <i class="fas fa-chevron-down med-sidebar-arrow"></i>
+                                </button>
+                                <ul class="med-sidebar-submenu">
+                                    <li><a href="#" class="med-sidebar-sublink">كادر الكلية الأكاديمي</a></li>
+                                    <li><a href="#" class="med-sidebar-sublink">كادر الكلية الإداري</a></li>
+                                </ul>
+                            </li>
+                            <li class="med-sidebar-item">
+                                <a href="#" class="med-sidebar-link">
+                                    <i class="fas fa-newspaper"></i>
+                                    <span>أخبار الكلية</span>
+                                </a>
+                            </li>
+                            <li class="med-sidebar-item med-sidebar-item--parent">
+                                <button type="button" class="med-sidebar-link med-sidebar-toggle">
+                                    <i class="fas fa-building-columns"></i>
+                                    <span>مرافق الكلية</span>
+                                    <i class="fas fa-chevron-down med-sidebar-arrow"></i>
+                                </button>
+                                <ul class="med-sidebar-submenu">
+                                    <li><a href="facilities-labs.html" class="med-sidebar-sublink">المختبرات</a></li>
+                                    <li><a href="facilities-library.html" class="med-sidebar-sublink">المكتبة</a></li>
+                                    <li><a href="facilities-classrooms.html" class="med-sidebar-sublink">قاعات
+                                            دراسية</a></li>
+                                </ul>
+                            </li>
+                            <li class="med-sidebar-item med-sidebar-item--parent">
+                                <button type="button" class="med-sidebar-link med-sidebar-toggle">
+                                    <i class="fas fa-book-reader"></i>
+                                    <span>التعليم الطبي المستمر</span>
+                                    <i class="fas fa-chevron-down med-sidebar-arrow"></i>
+                                </button>
+                                <ul class="med-sidebar-submenu">
+                                    <li><a href="facilities-continuing-education.html"
+                                            class="med-sidebar-sublink ">التعليم المستمر</a></li>
+                                    <li><a href="cme-organization.html" class="med-sidebar-sublink">الهيكل التنظيمي</a>
+                                    </li>
+                                    <li><a href="cme-schedules.html" class="med-sidebar-sublink">الجداول</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </aside>
+
+            <div class="med-page-content">
+                <!-- Dean Speech -->
+                <section id="dean-speech" class="president-panorama py-20 lg:py-24">
+                    <div class="container max-w-6xl mx-auto px-4">
+                        <div class="president-panorama-shell items-start" data-about-animate>
+                            <div class="president-panorama-image">
+                                <img src="./img/مازم.jpeg" alt="د. مازن عبدالله باحشوان">
+                                <div class="president-panorama-chip">عميد كلية الهندسة وتقنية المعلومات</div>
+                            </div>
+                            <div class="president-panorama-content">
+                                <p class="panorama-eyebrow">كلمة عميد الكلية</p>
+                                <p class="panorama-paragraph">الحمد لله والصلاة والسلام على أفضل الأنبياء والمرسلين،
+                                    نبينا محمد صلى الله عليه وسلم الذي حث أمته على العلم الذي به تسمو الأمم.</p>
+                                <p class="panorama-paragraph">بعد، يسرني أن أرحب بجميع زوار موقع كلية الهندسة وتقنية
+                                    المعلومات بجامعة العرب، هذا الصرح الأكاديمي الذي يسعى إلى إعداد جيل متميز من
+                                    المهندسين والمتخصصين في مختلف المجالات الهندسية والتقنية.</p>
+                                <p class="panorama-paragraph">تأسست كلية الهندسة وتقنية المعلومات في عام 2017م بمدينة
+                                    المكلا، عاصمة محافظة حضرموت، لتكون رائدة في تقديم تعليم أكاديمي متميز يسهم في تأهيل
+                                    مهندسين مؤهلين وفاعلين قادرين على تلبية احتياجات سوق العمل والمجتمع. تضم الكلية ستة
+                                    أقسام علمية تقدم برامج أكاديمية متخصصة في مرحلة البكالوريوس، حيث يشمل قسم تقنية
+                                    المعلومات تأهيل متخصصين في علوم الحوسبة وتقنياتها المتقدمة، بينما يركز قسم هندسة
+                                    التعدين على تخريج مهندسين قادرين على استكشاف وإدارة الموارد المعدنية. كما أن قسم
+                                    هندسة التصميم الداخلي يهدف إلى تطوير قدرات الإبداع والتصميم في مختلف المجالات
+                                    الداخلية، في حين يسعى قسم الهندسة المدنية إلى تخريج مهندسين مؤهلين لبناء البنية
+                                    التحتية والمشاريع المدنية. ويهتم قسم الذكاء الاصطناعي بإعداد متخصصين في الذكاء
+                                    الاصطناعي وتعلم الآلة وتحليل البيانات، مما يمكنهم من تطوير الأنظمة الذكية والتقنيات
+                                    الحديثة، فيما يعنى قسم الهندسة المعمارية بتأهيل مهندسين معماريين قادرين على تصميم
+                                    وإبداع المساحات العمرانية والمباني وفق معايير جمالية ووظيفية متطورة.</p>
+                                <p class="panorama-paragraph">كما أن الكلية تولي اهتمامًا كبيرًا باستقطاب أعضاء هيئة
+                                    تدريس متميزين بالإضافة إلى ذلك، تسهم الكلية بشكل فعّال في خدمة المجتمع ومهنة الهندسة
+                                    من خلال تقديم الاستشارات للقطاعين العام والخاص، والمشاركة في المؤتمرات والملتقيات
+                                    العلمية على المستويين المحلي والدولي.</p>
+                                <p class="panorama-paragraph">ختامًا، نأمل أن تجدوا في هذا الموقع ما يجيب عن تساؤلاتكم
+                                    واستفساراتكم حول الكلية وبرامجها. كما ندعوكم لمشاركتنا ملاحظاتكم وآرائكم التي تساهم
+                                    في تطوير الكلية وتعزيز دورها في خدمة المجتمع. للحصول على المزيد من المعلومات، لا
+                                    تترددوا في التواصل معنا عبر أرقام الاتصال المدرجة في الموقع.</p>
+                                <p class="panorama-paragraph">وتقبلوا خالص التحية،</p>
+                                <div class="panorama-signature">
+                                    <div>
+                                        <p class="about-author-name">د. مازن عبدالله باحشوان</p>
+                                        <p class="about-author-role">عميد كلية الهندسة وتقنية المعلومات</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- About College -->
+                <section id="about-college" class="about-foundation-section pb-16 lg:pb-20">
+                    <div class="container max-w-7xl mx-auto px-4">
+                        <div class="about-section-heading mb-10 lg:mb-14">
+                            <div class="flex items-center gap-2">
+                                <img src="./img/about-img.png" alt="عن الكلية"
+                                    class="section-title-icon w-6 h-6 lg:w-8 lg:h-8 object-contain">
+                                <h2 class="section-title text-2xl lg:text-3xl xl:text-4xl font-bold"
+                                    style="color: var(--ink); font-size: 25px;">عن الكلية</h2>
+                            </div>
+                        </div>
+                        <div class="about-grid-layout">
+                            <article class="about-main-card" data-about-animate>
+                                <div class="about-badge-row">
+                                    <span class="about-pill">أُنشئت كلية الهندسة وتقنية المعلومات في العام الجامعي
+                                        2017/2018م ومدة الدراسة فيها أربع سنوات.</span>
+                                </div>
+                                <h3 class="about-card-title">كلية الهندسة وتقنية المعلومات</h3>
+                                <p class="about-card-text">
+                                    تقدم الكلية تعليمًا جامعيًا تخصصيًا في مجال الهندسة والحاسب الآلي وتقنية المعلومات
+                                    وتضم أربعة تخصصات علمية هي:
+                                <ul class="about-highlight-list">
+                                    <li>تقنية المعلومات (IT)</li>
+                                    <li>هندسة التعدين</li>
+                                    <li>هندسة التصميم الداخلي</li>
+                                    <li>هندسة مدنية</li>
+                                    <li>الذكاء الاصطناعي</li>
+                                    <li>الهندسة المعمارية</li>
+                                </ul>
+                                </p>
+                            </article>
+                            <div class="about-aside">
+                                <article id="vision" class="about-mini-card" data-about-animate>
+                                    <div class="about-mini-icon"><i class="fas fa-eye"></i></div>
+                                    <div class="about-mini-body">
+                                        <h3>الرؤية</h3>
+                                        <p>التميّز والريادة في مجال الهندسة وتقنية المعلومات وخدمة المجتمع.</p>
+                                    </div>
+                                </article>
+                                <article id="mission" class="about-mini-card mission" data-about-animate>
+                                    <div class="about-mini-icon"><i class="fas fa-bullseye"></i></div>
+                                    <div class="about-mini-body">
+                                        <h3>الرسالة</h3>
+                                        <p>إعداد كوادر ذات كفاءة عالية في مجال الهندسة وتقنية المعلومات قادرة على
+                                            المنافسة في سوق العمل من خلال تقديم برامج أكاديمية معتمدة تواكب التطور
+                                            العلمي.</p>
+                                    </div>
+                                </article>
+                                <article class="about-fact-card" data-about-animate>
+                                    <h3>الأهداف</h3>
+                                    <ul class="about-fact-list">
+                                        <li>إكساب الخريجين المعارف الأساسية في مجال الهندسة وتقنية المعلومات</li>
+                                        <li>التحديث والتطوير المستمر لبرامج الكلية والسعي نحو الاعتماد الأكاديمي</li>
+                                        <li>إكساب الطلاب معارف ومهارات وسلوكيات تمكنهم من التعلم الذاتي، والتميز في
+                                            الدراسات العليا، والبحث العلمي</li>
+                                        <li>تزويد الخريجين بالمهارات المختلفة التي تمكنهم من التنسيق والتواصل مع قطاعات
+                                            المجتمع المختلفة لتحقيق شراكة حقيقة لمواكبة متطلبات التنمية</li>
+                                        <li>توفر بيئة علمية ملائمة للعمل الأكاديمي والبحث العلمي</li>
+                                        <li>تعزيز الشراكة مع المؤسسات الحكومية والخاصة ذات العلاقة من أجل خدمة المجتمع
+                                        </li>
+                                    </ul>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

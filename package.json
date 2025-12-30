@@ -1,0 +1,27 @@
+{
+  "name": "gspa",
+  "version": "1.0.0",
+  "description": "GSPA Website",
+  "type": "module",
+  "scripts": {
+    "dev": "tailwindcss -i ./css/input.css -o ./css/tailwind.css --watch",
+    "build": "tailwindcss -i ./css/input.css -o ./css/tailwind.css --minify",
+    "api": "node server.js",
+    "start": "concurrently \"npm run dev\" \"npm run api\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.17"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "axios": "^1.6.0",
+    "dotenv": "^16.4.5",
+    "concurrently": "^8.2.2"
+  }
+}
