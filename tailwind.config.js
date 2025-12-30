@@ -30,7 +30,7 @@ module.exports = {
         }
       },
       fontFamily: {
-        cairo: ['Cairo', 'sans-serif'],
+        cairo: ['Cairo'],
       },
       boxShadow: {
         'glow': '0 0 20px rgba(0, 158, 145, 0.3)',
@@ -40,4 +40,5 @@ module.exports = {
   },
   plugins: [],
 }
+
 
