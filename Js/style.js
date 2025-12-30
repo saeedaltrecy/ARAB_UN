@@ -1,103 +1,4 @@
-// // تهيئة LenisJS - إعداد احترافي للأداء العالي
-// const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-// let isMobileNavOpen = false;
-
-// const lenis =
-//   typeof Lenis !== "undefined"
-//     ? new Lenis({
-//         duration: prefersReducedMotion.matches ? 0.5 : 1.2,
-//         easing: (t) => 1 - Math.pow(1 - t, 4),
-//     smoothWheel: true,
-//         smoothTouch: true,
-//         touchInertiaMultiplier: 12,
-//         lerp: 0.08,
-//         wheelMultiplier: 1.15,
-//         gestureOrientation: "vertical",
-//         orientation: "vertical",
-//         syncTouch: true,
-//         syncTouchLerp: 0.06,
-//         touchMultiplier: 1.15,
-//     infinite: false,
-//         autoResize: true,
-//         normalizeWheel: true,
-//         domTarget: "html",
-//       })
-//     : undefined;
-
-// const runLenisRAF = (time) => {
-//   if (lenis) {
-//     lenis.raf(time);
-//   }
-//   requestAnimationFrame(runLenisRAF);
-// };
-
-// requestAnimationFrame(runLenisRAF);
-
-// const resumeLenis = () => {
-//   if (lenis && !isMobileNavOpen) {
-//     lenis.start();
-//   }
-// };
-
-// const pauseLenis = () => {
-//   if (lenis) {
-//     lenis.stop();
-//   }
-// };
-
-// if (lenis) {
-//   resumeLenis();
-
-//   let pointerVelocity = 0;
-//   let pointerY = window.innerHeight / 2;
-
-//   window.addEventListener(
-//     "mousemove",
-//     (event) => {
-//       const deltaY = event.clientY - pointerY;
-//       pointerVelocity = deltaY * 0.0015;
-//       pointerY = event.clientY;
-
-//       if (!isMobileNavOpen) {
-//         lenis.scrollTo(lenis.scroll + pointerVelocity, {
-//           immediate: false,
-//           lock: false,
-//         });
-//       }
-//     },
-//     { passive: true }
-//   );
-
-//   document.addEventListener("visibilitychange", () => {
-//     if (document.hidden) {
-//       pauseLenis();
-//     } else {
-//       resumeLenis();
-//     }
-//   });
-
-//   prefersReducedMotion.addEventListener("change", () => {
-//     if (prefersReducedMotion.matches) {
-//       pauseLenis();
-//     } else {
-//       resumeLenis();
-//     }
-//   });
-
-//   window.addEventListener("load", resumeLenis);
-
-//   ["scroll", "touchstart", "wheel", "keydown"].forEach((evt) => {
-//     window.addEventListener(
-//       evt,
-//       () => {
-//         resumeLenis();
-//       },
-//       { passive: true }
-//     );
-//   });
-// }
-
-// تهيئة GSAP عند تحميل الصفحة
+ 
 
 document.addEventListener("DOMContentLoaded", function () {
   const rootStyles = getComputedStyle(document.documentElement);
@@ -107,8 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     rootStyles.getPropertyValue("--primary-soft").trim() ||
     "rgba(0, 158, 145, 0.08)";
   const inkColor = rootStyles.getPropertyValue("--ink").trim() || "#fd823b";
-  // أنيميشن لشعار الموقع - مع فحص وجود العنصر
-  const logoLink = document.querySelector(".logo-link");
+   const logoLink = document.querySelector(".logo-link");
   if (logoLink) {
     gsap.from(".logo-link", {
       duration: 1,
@@ -119,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // أنيميشن لعناصر القائمة بدون إخفائها - مع فحص وجود العناصر
+  //  أنيميشن لعناصر القائمة بدون إخفائها - مع فحص وجود العناصر   
   const navLinks = document.querySelectorAll('.nav-link');
   if (navLinks.length > 0) {
     gsap.set(".nav-link", { opacity: 1 });
@@ -1771,7 +1671,7 @@ document.addEventListener("DOMContentLoaded", function () {
       attributeFilter: ["dir"],
     });
 
-    document.querySelectorAll(".language-dropdown a, .mobile-nav-sub-link").forEach((link) => {
+    document.querySelectorAll(".language-dropdown a").forEach((link) => {
       link.addEventListener("click", () => {
         setTimeout(updateNewsDirection, 100);
       });
@@ -1917,7 +1817,7 @@ document.addEventListener("DOMContentLoaded", function () {
       attributeFilter: ["dir"],
     });
 
-    document.querySelectorAll(".language-dropdown a, .mobile-nav-sub-link").forEach(function (link) {
+    document.querySelectorAll(".language-dropdown a").forEach(function (link) {
       link.addEventListener("click", function () {
         setTimeout(updateFeaturesDirection, 100);
       });
@@ -2192,9 +2092,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Event listener لتغيير اللغة (إذا كان موجود)
-    document.querySelectorAll(".language-dropdown a, .mobile-nav-sub-link").forEach(function (link) {
+    document.querySelectorAll(".language-dropdown a").forEach(function (link) {
       link.addEventListener("click", function (e) {
-        e.preventDefault();
+        // Only prevent default if the href is '#' (common for language switchers or placeholdes)
+        if (link.getAttribute('href') === '#' || !link.getAttribute('href')) {
+          e.preventDefault();
+        }
         // انتظر قليلاً ثم حدث direction
         setTimeout(updateSwiperDirection, 100);
       });
