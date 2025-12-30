@@ -836,6 +836,20 @@ document.querySelectorAll(".mobile-nav-accordion-toggle").forEach((toggle) => {
   });
 });
 
+// إغلاق القائمة عند الضغط على أي رابط
+if (mobileNavMenu) {
+  mobileNavMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", (e) => {
+      const href = link.getAttribute("href");
+      if (href && href !== "#") {
+        // إغلاق القائمة
+        closeMobileNav();
+        // المتصفح سيتولى الانتقال بربط href طبيعياً
+      }
+    });
+  });
+}
+
 // إغلاق القائمة عند تغيير حجم الشاشة إلى desktop
 window.addEventListener("resize", () => {
   if (
