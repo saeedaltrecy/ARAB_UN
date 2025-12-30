@@ -375,6 +375,264 @@
             </ul>
         </nav>
     </header>
+ <!-- قائمة الجوال المنبثقة -->
+    <div id="mobile-nav-menu" class="fixed inset-0 z-50 hidden lg:hidden mobile-nav-panel">
+        <div class="fixed inset-0 bg-black/50 mobile-nav-overlay backdrop-blur-sm" aria-hidden="true"></div>
+        <div
+            class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white/98 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-slate-200/70 backdrop-blur-xl mobile-nav-content shadow-2xl">
+            <!-- رأس القائمة -->
+            <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-200/60">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="./img/logo.png" alt="شعار الجامعة" class="h-10 w-auto drop-shadow-sm">
+                    <!-- <span class="text-base font-semibold text-primary">جامعة العرب</span> -->
+                </a>
+                <button type="button" id="mobile-nav-close"
+                    class="rounded-full p-2.5 text-primary hover-bg-primary hover-text-white transition shadow-soft">
+                    <span class="sr-only">إغلاق القائمة</span>
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+
+            <!-- محتوى القائمة -->
+            <div class="space-y-2 mobile-nav-links">
+                <!-- عن الجامعة -->
+                <a href="about.html"
+                    class="mobile-nav-link block rounded-xl bg-slate-50 px-4 py-3 text-base font-semibold text-primary transition hover-bg-primary-tint hover-text-primary-dark">
+                    عن الجامعة
+                </a>
+
+                <!-- الكليات -->
+                <div class="mobile-nav-accordion">
+                    <button type="button"
+                        class="mobile-nav-accordion-toggle w-full flex items-center justify-between rounded-xl bg-slate-50 px-4 py-3 text-base font-semibold text-primary transition hover-bg-primary-tint">
+                        <span>الكليات</span>
+                        <i
+                            class="fas fa-chevron-down text-xs transition-transform duration-300 mobile-nav-accordion-icon"></i>
+                    </button>
+                    <div class="mobile-nav-accordion-content hidden mt-2 space-y-1 bg-white/80 px-4 py-2 rounded-xl">
+                        <a href="college-medicine.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">كلية
+                            الطب والعلوم الصحية</a>
+                        <a href="college-dentistry.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">كلية
+                            طب الأسنان</a>
+                        <a href="index.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">كلية
+                            الهندسة وتقنية المعلومات</a>
+                        <a href="index.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">كلية
+                            العلوم الإدارية</a>
+                    </div>
+                </div>
+
+                <!-- مراكز – وحدات الجامعة -->
+                <div class="mobile-nav-accordion">
+                    <button type="button"
+                        class="mobile-nav-accordion-toggle w-full flex items-center justify-between rounded-xl bg-slate-50 px-4 py-3 text-base font-semibold text-primary transition hover-bg-primary-tint">
+                        <span>مراكز – وحدات الجامعة</span>
+                        <i
+                            class="fas fa-chevron-down text-xs transition-transform duration-300 mobile-nav-accordion-icon"></i>
+                    </button>
+                    <div class="mobile-nav-accordion-content hidden mt-2 space-y-1 bg-white/80 px-4 py-2 rounded-xl">
+                        <a href="center-academic-development.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">مركز
+                            التطوير الأكاديمي وضمان الجودة</a>
+                        <a href="unit-academic-advising.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">وحدة
+                            الإرشاد الأكاديمي</a>
+                        <a href="unit-community-service.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">وحدة
+                            خدمة المجتمع</a>
+                    </div>
+                </div>
+
+                <!-- البرامج الأكاديمية -->
+                <div class="mobile-nav-accordion">
+                    <button type="button"
+                        class="mobile-nav-accordion-toggle w-full flex items-center justify-between rounded-xl bg-slate-50 px-4 py-3 text-base font-semibold text-primary transition hover-bg-primary-tint">
+                        <span>البرامج الأكاديمية</span>
+                        <i
+                            class="fas fa-chevron-down text-xs transition-transform duration-300 mobile-nav-accordion-icon"></i>
+                    </button>
+                    <div class="mobile-nav-accordion-content hidden mt-2 space-y-1 bg-white/80 px-4 py-2 rounded-xl">
+                        <a href="program-dentistry.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">بكالوريوس
+                            طب وجراحة الفم والأسنان</a>
+                        <a href="program-medical-labs.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">بكالوريوس
+                            مختبرات طبية</a>
+                        <a href="program-pharmacy.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">بكالوريوس
+                            صيدلة</a>
+                        <a href="program-medicine.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">بكالوريوس
+                            طب عام وجراحة</a>
+                        <a href="index.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">بكالوريوس
+                            السمع والنطق</a>
+                        <a href="index.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">بكالوريوس
+                            العلاج الطبيعي</a>
+                        <a href="program-internship-dentistry.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">برنامج
+                            سنة الامتياز في طب الأسنان</a>
+                        <a href="index.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">بكالوريوس
+                            تقنية معلومات</a>
+                        <a href="index.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">بكالوريوس
+                            هندسة تعدين</a>
+                        <a href="index.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">بكالوريوس
+                            هندسة التصميم الداخلي</a>
+                        <a href="index.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">بكالوريوس
+                            هندسة مدنية</a>
+                        <a href="index.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">بكالوريوس
+                            الذكاء الاصطناعي</a>
+                        <a href="index.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">بكالوريوس
+                            هندسة معمارية</a>
+                        <a href="index.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">بكالوريوس
+                            محاسبة</a>
+                        <a href="index.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">بكالوريوس
+                            إدارة أعمال</a>
+                    </div>
+                </div>
+
+                <!-- شؤون الطلاب -->
+                <div class="mobile-nav-accordion">
+                    <button type="button"
+                        class="mobile-nav-accordion-toggle w-full flex items-center justify-between rounded-xl bg-slate-50 px-4 py-3 text-base font-semibold text-primary transition hover-bg-primary-tint">
+                        <span>شؤون الطلاب</span>
+                        <i
+                            class="fas fa-chevron-down text-xs transition-transform duration-300 mobile-nav-accordion-icon"></i>
+                    </button>
+                    <div class="mobile-nav-accordion-content hidden mt-2 space-y-1 bg-white/80 px-4 py-2 rounded-xl">
+                        <a href="student-guide.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">دليل
+                            الطالب الجامعي</a>
+                        <a href="student-portal.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">نتائج
+                            الطلاب</a>
+                        <a href="university-calendar.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">التقويم
+                            الجامعي</a>
+                        <a href="regulations.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">اللوائح
+                            والأنظمة</a>
+                        <a href="regulations.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">النماذج
+                            والاستمارات</a>
+                        <a href="graduates.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">الطلاب
+                            الخريجين</a>
+                    </div>
+                </div>
+
+                <!-- خدمة المجتمع -->
+                <div class="mobile-nav-accordion">
+                    <button type="button"
+                        class="mobile-nav-accordion-toggle w-full flex items-center justify-between rounded-xl bg-slate-50 px-4 py-3 text-base font-semibold text-primary transition hover-bg-primary-tint">
+                        <span>خدمة المجتمع</span>
+                        <i
+                            class="fas fa-chevron-down text-xs transition-transform duration-300 mobile-nav-accordion-icon"></i>
+                    </button>
+                    <div class="mobile-nav-accordion-content hidden mt-2 space-y-1 bg-white/80 px-4 py-2 rounded-xl">
+                        <a href="index.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">قافلة
+                            العرب 1</a>
+                        <a href="index.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">قافلة
+                            العرب 2</a>
+                        <a href="index.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">تدشين
+                            حملة طبيب أسنان لكل مدرسة</a>
+                        <a href="index.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">عيادات
+                            طب الأسنان المجانية</a>
+                    </div>
+                </div>
+
+                <!-- مجلة الجامعة -->
+                <div class="mobile-nav-accordion">
+                    <button type="button"
+                        class="mobile-nav-accordion-toggle w-full flex items-center justify-between rounded-xl bg-slate-50 px-4 py-3 text-base font-semibold text-primary transition hover-bg-primary-tint">
+                        <span>مجلة الجامعة</span>
+                        <i
+                            class="fas fa-chevron-down text-xs transition-transform duration-300 mobile-nav-accordion-icon"></i>
+                    </button>
+                    <div class="mobile-nav-accordion-content hidden mt-2 space-y-1 bg-white/80 px-4 py-2 rounded-xl">
+                        <a href="index.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">مجلة
+                            العرب للعلوم الطبية</a>
+                    </div>
+                </div>
+
+                <!-- المؤتمرات -->
+                <div class="mobile-nav-accordion">
+                    <button type="button"
+                        class="mobile-nav-accordion-toggle w-full flex items-center justify-between rounded-xl bg-slate-50 px-4 py-3 text-base font-semibold text-primary transition hover-bg-primary-tint">
+                        <span>المؤتمرات</span>
+                        <i
+                            class="fas fa-chevron-down text-xs transition-transform duration-300 mobile-nav-accordion-icon"></i>
+                    </button>
+                    <div class="mobile-nav-accordion-content hidden mt-2 space-y-1 bg-white/80 px-4 py-2 rounded-xl">
+                        <a href="college-news.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">المؤتمر
+                            الدولي لأمراض السرطان</a>
+                        <a href="college-news.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">المؤتمر
+                            الدولي الطبي الثاني لسلامة المرضى بين الواقع والمأمول</a>
+                        <a href="college-news.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">المؤتمر
+                            الطبي الدولي الثالث تطوير التعليم الطبي نحو رعاية صحية آمنة</a>
+                        <a href="college-news.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">المؤتمر
+                            الطبي الدولي الرابع رعاية الإصابات: التحديات والحلول</a>
+                        <a href="college-news.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">المؤتمر
+                            الدولي الأول لطب الأسنان (طب الأسنان.. الواقع والتحديات)</a>
+                        <a href="college-news.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">محاضرات
+                            وتقارير مرئية إخبارية</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- زر الالتحاق في قائمة الجوال -->
+            <div class="mt-6 pt-6">
+                <a href="index.html#contact"
+                    class="mobile-nav-link block w-full text-center rounded-xl bg-slate-50 px-4 py-3 text-base font-semibold text-primary transition hover-bg-primary-tint hover-text-primary-dark">
+                    الالتحاق
+                </a>
+            </div>
+
+            <!-- زر اللغة في أسفل القائمة -->
+            <div class="mt-4 pt-4 border-t border-slate-200/60">
+                <div class="mobile-nav-accordion">
+                    <button type="button"
+                        class="mobile-nav-accordion-toggle w-full flex items-center justify-between rounded-xl bg-slate-50 px-4 py-3 text-base font-semibold text-primary transition hover-bg-primary-tint">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-language"></i>
+                            <span>اللغة</span>
+                        </div>
+                        <i
+                            class="fas fa-chevron-down text-xs transition-transform duration-300 mobile-nav-accordion-icon"></i>
+                    </button>
+                    <div class="mobile-nav-accordion-content hidden mt-2 space-y-1 bg-white/80 px-4 py-2 rounded-xl">
+                        <a href="about.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">العربية</a>
+                        <a href="about.html"
+                            class="mobile-nav-sub-link block px-3 py-2 text-sm text-primary rounded-lg hover-bg-primary-tint hover-text-primary-dark transition">English</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Hero Slider Section -->
     <section class="hero-slider-section relative overflow-hidden">
